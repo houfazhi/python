@@ -3,6 +3,7 @@ import os
 import speech_recognition as sr
 
 
+
 # Use SpeechRecognition to record 使用语音识别包录制音频
 def my_record(rate=16000):
     r = sr.Recognizer()

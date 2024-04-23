@@ -103,7 +103,7 @@ def Turing(text_words=""):
 
 # 语音合成，输出机器人的回答
 
-if __name__ == '__main__':
+def TalkToTuLing():
     engine.say("欢迎使用图灵机器人，您可以与我对话，请问有什么可以帮您。需要退出请说‘退出’或者‘结束’")
     engine.say("hello")
     engine.runAndWait()

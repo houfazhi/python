@@ -1,21 +1,23 @@
-# 开发时间：2024/4/23 17:04
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name='Voice_Interaction',
     version='1.0',
-    packages=['Voice_Interaction'],
+    packages=find_packages(),
+    include_package_data=True,
     install_requires=[
-        'os',
         'speech_recognition',
         'aip',
         'pyttsx3',
-        'requests',
-        'json',
-        'speech_recognition',
+        # Add other dependencies here
     ],
+    entry_points={
+        'console_scripts': [
+            'my_voice_recognition = your_module:main',  # Replace with your entry point
+        ],
+    },
     author='Hou',
     author_email='2775313450@qq.com',
-    description='A simple Voice_Interaction package',
-    url='https://github.com/yourusername/MyPackage',
+    description='a simple Voice_Interaction package',
+    url='https://github.com/your_username/your_project',
 )
