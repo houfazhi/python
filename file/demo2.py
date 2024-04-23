@@ -4,7 +4,7 @@ import os
 print(os.getcwd())
 print(os.path.abspath('demo2.py'))
 print(os.path.exists('demo1.py'))
-print(os.path.exists('../tts/demo4.py'))
+print(os.path.exists('../tts/语音交互.py'))
 print(os.path.join('D:\\houfazhi','wegame'))
 print(os.path.splitext(os.getcwd()))
 print('---------------------------------')

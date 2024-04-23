@@ -13,15 +13,14 @@ def speech_to_text():
        with sr.Microphone() as source:
            print("请说点什么")
            speech.say("请说点什么")
-           audio = recognizer.listen(source, timeout=5)  # 设置5秒的超时时间
+           audio = recognizer.listen(source, timeout=3)  # 设置5秒的超时时间
        try:
            text = recognizer.recognize_google(audio, language='zh-CN')  # 使用中文进行语音识别
            print("你说的是: " + text + "吗？")
            speech.say("你说的是: " + text + "吗？")
            speech.say("请回答：")
            text1 = recognizer.recognize_google(audio, language='zh-CN')  # 使用中文进行语音识别
-           if text1  == "是":
-               break
+           print("你的回答是："+text1)
            return text
        except sr.UnknownValueError:
            print("抱歉，我无法理解你说的话。")
